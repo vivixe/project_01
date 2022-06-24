@@ -1,0 +1,109 @@
+form{
+    width: 600px;
+    height: 300px;
+    padding: 20px 0px 20px 20px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 130px auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0.68;
+    transition: 0.68s;
+}
+form:hover{
+    opacity: 0.88;
+}
+
+form>label{
+    height: 50px;
+    line-height: 60px;
+    font-size: 30px;
+    text-align: right;
+    margin-top: 20px;
+}
+form>label>select{
+    display: inline-block;
+    width: 100px;
+    margin-right: 325px;
+}
+form>label>input{
+    display: inline-block;
+    width: 300px;
+    margin-right: 100px;
+    padding-left: 20px;
+    font-size: 30px;
+    height: 40px;
+}
+form>button{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 65px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #002fa7;
+    color: #fff;
+    font-size: 19px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+}
+form>button:hover{
+    /* background: linear-gradient(90deg,#03a9f4, #f441a5, #ffeb3b, #03a9f4); */
+    background: linear-gradient(130deg,#002fa7, #99e2fa, #002fa7);
+    /* background: linear-gradient(130deg,#ffedd0, #a1e6ff, #ffedd0); */
+    background-size: 300%;
+
+    animation: glow 8s linear infinite;
+    color: #fff;
+    z-index: 10001;
+}
+
+form>button::before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    border-radius: 50px;
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+form>button:hover::before{
+    opacity: 1;
+    z-index: -1;
+}
+form>span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+    font-size: 20px;
+    color: red;
+    display: none;
+}
+form>p{
+    text-align: right;
+    padding-right: 30px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #002fa7;
+}
+form>label>select{
+    padding-left: 20px;
+    padding: 5px;
+    font-size: 20px;
+}
+.iconfont{
+    display: block;
+    color: #002fa7;
+    font-size: 40px!important;
+}
