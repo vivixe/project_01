@@ -1,9 +1,18 @@
+/*
+ * @Author: vivi.
+ * @Date: 2022-05-24 13:10:57
+ * @LastEditTime: 2022-06-24 21:05:26
+ * @FilePath: \MyFirstProject\src\js\index.js
+ * @Description: 
+ */
 const token = window.localStorage.getItem('token')
 const id = window.localStorage.getItem('id')
 
 if (!token || !id) {
     $('.off').addClass('active')
     $('.on').removeClass('active')
+    window.alert('您还未登录，请登录后再进行操作')
+    window.location.href = '../html/login.html'
 } else {
     getInfo()
 }
